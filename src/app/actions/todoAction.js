@@ -1,7 +1,11 @@
 export var addItem = (item) => {
-    return {
-        type: 'ADD',
-        payload: item
+    return (dispatch) => {
+        setTimeout(() => {
+            dispatch({
+                type: 'ADD',
+                payload: item
+            });
+        }, 500);    
     }
 }
 

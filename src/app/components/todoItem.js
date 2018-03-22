@@ -5,11 +5,11 @@ require('../css/todoItem.css');
 var TodoItem = CreateReactClass({    
     render: function() {
         return (          
-            <li>
-                <div className="todo-item">
-                    <span className="item-name">{this.props.item}</span>
-                    <span className="item-delete" onClick={this.deleteItem}> x </span>
-                </div>
+            <li className="item">              
+                <span className="item-name">{this.props.item}</span>
+                <span className="item-delete"
+                      title="Delete item"
+                      onClick={this.deleteItem} >x</span>               
             </li>          
         );
     },
