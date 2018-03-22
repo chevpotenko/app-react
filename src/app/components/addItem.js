@@ -1,7 +1,6 @@
 var React = require('react');
 var CreateReactClass = require('create-react-class');
-require('./css/addItem.css');
-
+require('../css/addItem.css');
 
 var AddItem = CreateReactClass({    
     render: function() {

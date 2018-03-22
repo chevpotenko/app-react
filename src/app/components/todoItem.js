@@ -1,6 +1,6 @@
 var React = require('react');
 var CreateReactClass = require('create-react-class');
-require('./css/todoItem.css');
+require('../css/todoItem.css');
 
 var TodoItem = CreateReactClass({    
     render: function() {

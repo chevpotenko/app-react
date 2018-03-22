@@ -1,28 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var CreateReactClass = require('create-react-class');
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+var Provider = require('react-redux').Provider;
 
-var About = require('./about');
-var TodoComponent = require('./toDoComponent');
-require('./css/index.css');
+const App = require('./containers/app');
 
-var App = CreateReactClass({    
-    render: function() {
-        return (
-            <Router>
-                <div>
-                    <nav>
-                        <Link to={'/about'}>About</Link>
-                        &nbsp;&nbsp;
-                        <Link to={'/'}>To Do</Link>
-                    </nav>
-                    <Route exact path="/" component={TodoComponent}/>
-                    <Route path="/about" component={About}/>
-                </div>
-            </Router>
-        );
-    }
-});
+import store from './store';
 
-ReactDOM.render(<App/>, document.getElementById('todo_wrapper'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    document.getElementById('todo_wrapper'));
