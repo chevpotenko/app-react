@@ -1,5 +1,5 @@
 const todoReducer = (state = {
-        todos: ['wash up', 'eat some cheese', 'take a nap']
+        todos: ['HTML', 'CSS', 'JS']
 }, action) => {
     switch (action.type) {
         case 'ADD':

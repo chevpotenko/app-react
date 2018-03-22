@@ -17,15 +17,13 @@ var App = CreateReactClass({
             <Router>
                 <div>
                     <nav>
-                        <Link to={'/about'}>About</Link>
+                        <Link to={'/'}>Home</Link>
                         &nbsp;&nbsp;
-                        <Link to={'/'}>To Do</Link>
+                        <Link to={'/about'}>About</Link>                        
                     </nav>
-                    <Route exact path="/" render={
-                            () => <ToDoComponent todos={this.props.todos}
-                                                onAdd={this.props.onAdd}
-                                                onDelete={this.props.onDelete}/>
-                        } />
+                    <Route exact path="/" render={() => <ToDoComponent todos={this.props.todos}
+                                                                       onAdd={this.props.onAdd}
+                                                                       onDelete={this.props.onDelete}/>} />
                     <Route path="/about" component={About}/>
                 </div>
             </Router>
