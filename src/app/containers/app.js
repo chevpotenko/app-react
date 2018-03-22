@@ -9,7 +9,7 @@ import { deleteItem } from '../actions/todoAction';
 var ToDoComponent = require('../components/toDoComponent');
 var About = require('../components/about');
 
-require('../css/index.css');
+require('../css/app.css');
 
 var App = CreateReactClass({    
     render: function() {
